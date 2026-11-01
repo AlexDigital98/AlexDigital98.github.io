@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#ffffff">
+<title>Портфолио маркетолога MAS</title>
+<meta name="description" content="Маркетолог: PR, Event, Influence, Projects. Кейсы с цифрами.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--g:#0b5d1e;--ink:#111;--line:#bdbdbd;--soft:#efefef;
+ --sans:'Golos Text','Helvetica Neue',Helvetica,Arial,sans-serif;--mono:'IBM Plex Mono',ui-monospace,Menlo,monospace}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#fff;color:var(--ink);font-family:var(--mono);font-size:12px;line-height:1.5;-webkit-text-size-adjust:100%}
+a{color:inherit}
+.page{max-width:1280px;margin:0 auto;padding:12px clamp(14px,3.5vw,46px) 0}
+.nav{display:flex;justify-content:space-between;gap:12px;font-size:11px}
+.nav .l{display:flex;gap:clamp(12px,2.2vw,28px);flex-wrap:wrap}
+.nav a{text-decoration:none}.nav a:hover{color:var(--g)}
+.title{font-family:var(--sans);font-weight:400;color:var(--g);text-transform:uppercase;line-height:.86;letter-spacing:0;margin:6px 0 clamp(18px,3vw,34px);
+  font-size:min(16vw,222px);white-space:nowrap;display:block;width:100%}
+.title span{display:inline-block}
+h2{font-family:var(--sans);font-weight:400;text-transform:uppercase;font-size:clamp(34px,5.2vw,64px);line-height:1;letter-spacing:-.01em;margin:0 0 22px;display:flex;align-items:center;gap:.25em}
+h2 svg{width:.62em;height:.62em;flex:none}
+.about{display:grid;grid-template-columns:minmax(0,26%) minmax(0,1fr);gap:clamp(18px,3vw,44px);margin-bottom:clamp(60px,9vw,110px)}
+.photo{position:relative;overflow:hidden;background:var(--soft)}
+.photo img{display:block;width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.05);transition:filter .4s}
+.photo:hover img{filter:none}
+.about .photo{aspect-ratio:3/4}
+.about .txt{max-width:560px;font-size:12px}
+.about .txt p{margin:0 0 12px}
+.list{margin-top:26px;border-top:1px solid var(--line)}
+.list button{display:block;width:100%;text-align:left;font:400 clamp(15px,1.6vw,19px)/1 var(--sans);text-transform:uppercase;background:none;border:0;border-bottom:1px solid var(--line);padding:11px 0;cursor:pointer;color:var(--ink)}
+.list button:hover{color:var(--g)}
+.skills{margin-bottom:clamp(60px,9vw,110px)}
+.skills .cols{max-width:none;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:26px clamp(18px,3vw,44px)}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:26px 40px;max-width:760px}
+.cols h4{margin:0 0 12px;font:400 12px var(--mono);text-transform:uppercase}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chips span{border:1px solid var(--ink);border-radius:5px;padding:3px 8px;font-size:11px}
+.plain{display:grid;grid-template-columns:1fr 1fr;gap:2px 20px;font-size:11px}
+.gal{margin-bottom:clamp(60px,9vw,110px)}
+.filters{display:flex;gap:6px 20px;flex-wrap:wrap;margin:-8px 0 20px;font-size:11px;text-transform:uppercase}
+.filters button{font:inherit;background:none;border:0;border-bottom:1px solid transparent;cursor:pointer;padding:2px 0;color:var(--ink);opacity:.5}
+.filters button.on{opacity:1;border-color:var(--ink)}
+.filters button:hover{opacity:1}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.item{text-align:left;background:none;border:0;padding:0;cursor:pointer;font:inherit;color:inherit;display:flex;flex-direction:column;gap:8px}
+.item .photo,.item .box{aspect-ratio:4/5;width:100%}
+.item .box{background:var(--soft);display:flex;align-items:flex-end;padding:12px;font:400 clamp(18px,2vw,26px)/1 var(--sans);text-transform:uppercase;transition:background .3s,color .3s}
+.item:hover .box{background:var(--g);color:#fff}
+.item small{font-size:11px;line-height:1.35}
+.item small b{font-weight:500;display:block;text-transform:uppercase}
+.item:focus-visible{outline:2px solid var(--g);outline-offset:3px}
+.exp{margin-bottom:clamp(60px,9vw,110px)}
+.exp .cols{margin-left:0;max-width:none;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.exp .cols h4{font-family:var(--sans);font-size:clamp(15px,1.6vw,19px)}
+.exp p{margin:0 0 10px;max-width:420px}
+footer{border-top:1px solid var(--line);padding:18px 0 calc(26px + env(safe-area-inset-bottom,0px));display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px;font-size:11px}
+footer h5{margin:0 0 6px;font:500 11px var(--mono);text-transform:uppercase}
+footer a{display:block;text-decoration:none}footer a:hover{color:var(--g)}
+dialog{border:0;padding:0;max-width:760px;width:calc(100% - 24px);max-height:90svh;background:#fff;color:var(--ink);font-family:var(--mono)}
+dialog::backdrop{background:rgba(0,0,0,.6)}
+dialog .in{padding:22px;display:grid;gap:14px}
+dialog .top{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}
+dialog h3{font:400 clamp(26px,4vw,40px)/1 var(--sans);text-transform:uppercase;margin:0}
+dialog .x{font:inherit;text-transform:uppercase;background:none;border:1px solid var(--ink);padding:5px 10px;cursor:pointer;flex:none}
+dialog .x:hover{background:var(--ink);color:#fff}
+dialog .photo{aspect-ratio:16/9;max-height:340px}
+dialog .photo.tall img{object-position:center 30%}
+.dlgrid.contain{grid-template-columns:260px minmax(0,1fr);align-items:start}
+.dlgrid.contain .media{min-height:0}
+.dlgrid.contain .photo{height:auto;min-height:0;background:#fef8ec;overflow:hidden;padding:0}
+.dlgrid.contain .photo img{position:static!important;inset:auto!important;width:100%!important;height:auto!important;object-fit:unset!important;display:block;filter:none!important}
+.dlgrid.wide{grid-template-columns:minmax(0,38%) minmax(0,1fr);align-items:start}
+.dlgrid.wide .media{min-height:0}
+.dlgrid.wide .media .photo{height:auto;min-height:0;aspect-ratio:auto}
+.dlgrid.wide .media .photo img{position:static!important;inset:auto!important;width:100%!important;height:auto!important;object-fit:unset!important;display:block}
+dialog .tag{font-size:11px;color:var(--g);text-transform:uppercase}
+dialog p{margin:0;font-size:12px}
+.facts{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));border-top:1px solid var(--line)}
+.facts li{padding:10px 10px 10px 0;border-bottom:1px solid var(--line);font-size:11px}
+.facts b{display:block;font:400 clamp(18px,2.4vw,24px)/1.1 var(--sans);margin-bottom:2px}
+.res{border-left:3px solid var(--g);padding-left:10px}
+.src{color:var(--g)}
+@media(max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}.skills .cols{grid-template-columns:1fr}}
+@media(max-width:640px){
+  .about{grid-template-columns:1fr}.about .photo{max-width:260px}
+  .nav .r{display:none}
+  .grid{gap:12px 8px}
+}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+
+.nav{position:sticky;top:0;z-index:50;background:#fff;padding:12px 0 10px;margin:0 0 -4px}
+.nav a{cursor:pointer;padding:4px 0;border-bottom:1px solid transparent}
+.nav a:hover{border-color:var(--g)}
+.title,.title *{pointer-events:none}
+section[id],footer[id]{scroll-margin-top:48px}
+.h2link{display:inline-flex;align-items:center;gap:.25em;text-decoration:none;color:inherit;transition:color .2s}
+.h2link:hover{color:var(--g)}
+.h2link:hover svg{transform:translate(4px,4px)}
+.h2link svg{transition:transform .2s}
+
+dialog{max-width:960px;width:calc(100% - 32px)}
+dialog .in{padding:18px;display:block}
+.dlgrid{display:grid;grid-template-columns:320px minmax(0,1fr);gap:18px;align-items:stretch}
+.dlgrid.solo{grid-template-columns:1fr}
+.dlgrid .media{min-height:260px}
+dialog .media .photo{height:100%;min-height:260px;aspect-ratio:auto;max-height:none}
+dialog .media .photo.tall{aspect-ratio:9/16;height:auto;min-height:0}
+dialog .media .photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+dialog .media .photo.tall img{object-position:center 25%}
+.dlgrid .info{display:flex;flex-direction:column;gap:10px;min-width:0}
+dialog .top{align-items:flex-start;gap:10px}
+dialog h3{font-size:clamp(22px,2.5vw,32px);line-height:1.02}
+dialog .tag{margin-bottom:4px}
+dialog .info p{font-size:12px;line-height:1.45}
+dialog .facts{grid-template-columns:repeat(2,1fr)}
+dialog .facts li{padding:8px 8px 8px 0}
+dialog .facts b{font-size:clamp(17px,1.9vw,22px)}
+dialog .res{margin-top:auto}
+@media(max-width:700px){
+  .dlgrid{grid-template-columns:1fr;gap:12px}
+  .dlgrid .media,dialog .media .photo{min-height:0;height:auto;aspect-ratio:16/9}
+  dialog .media .photo.tall{aspect-ratio:4/3}
+  .dlgrid.contain{grid-template-columns:1fr}
+  .dlgrid.contain .photo{aspect-ratio:1/1;max-width:320px;margin:0 auto}
+  dialog .in{padding:14px}
+  dialog{max-height:94svh;overflow:auto}
+}
+.title{margin-top:6px;font-weight:400}
+
+.rows{border-top:1px solid var(--ink)}
+.lrow{display:grid;grid-template-columns:44px minmax(0,2fr) minmax(0,.9fr) minmax(0,1.1fr);gap:0 18px;align-items:baseline;width:100%;text-align:left;background:none;border:0;border-bottom:1px solid var(--line);padding:20px 0;cursor:pointer;color:var(--ink);font:inherit;transition:padding .25s,color .25s,background .25s}
+.lrow:hover,.lrow:focus-visible{padding-left:14px;color:var(--g);outline:0;background:linear-gradient(90deg,rgba(11,93,30,.05),transparent)}
+.lrow .n{font-size:11px;opacity:.5}
+.lrow .t{font:400 clamp(20px,2.7vw,36px)/1.05 var(--sans);text-transform:uppercase;letter-spacing:-.01em}
+.lrow .t small{display:block;font:400 11px/1.4 var(--mono);text-transform:none;letter-spacing:0;opacity:.6;margin-top:6px}
+.lrow .d{font-size:11px;text-transform:uppercase}
+.lrow .k{font:400 clamp(16px,1.9vw,24px)/1.1 var(--sans);text-align:right}
+.lrow .k span{display:block;font:400 11px var(--mono);opacity:.55;margin-top:3px}
+.peek{position:fixed;left:0;top:0;width:280px;aspect-ratio:4/3;pointer-events:none;opacity:0;z-index:40;overflow:hidden;background:var(--soft);box-shadow:0 20px 50px -18px rgba(0,0,0,.45);transition:opacity .2s;will-change:transform}
+.peek.on{opacity:1}
+.peek img{width:100%;height:100%;object-fit:cover;display:block;filter:grayscale(1) contrast(1.05)}
+@media(max-width:700px){
+  .lrow{grid-template-columns:30px 1fr;gap:6px 10px;padding:16px 0}
+  .lrow .d{grid-column:2;grid-row:2}
+  .lrow .k{grid-column:2;grid-row:3;text-align:left}
+  .lrow:hover{padding-left:0}
+  .peek{display:none}
+}
+.dirdesc{max-width:760px;margin:0 0 24px;font-size:12px;line-height:1.55;border-left:3px solid var(--g);padding-left:12px}
+
+@media(max-width:640px){
+  .page{padding-top:0}
+  .nav{gap:12px;padding:10px 0 8px;font-size:11px;align-items:center}
+  .nav .l{flex-wrap:nowrap;overflow-x:auto;white-space:nowrap;gap:16px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  .nav .l::-webkit-scrollbar{display:none}
+  .nav .r{display:block;flex:none;white-space:nowrap}
+  .nav a{padding:10px 0}
+  h2{font-size:clamp(30px,10vw,44px);margin-bottom:16px}
+  .list button{padding:14px 0}
+  .skills .cols{grid-template-columns:1fr}
+  .chips span{padding:6px 10px}
+  .filters{gap:6px 16px;margin-bottom:14px}
+  .filters button{padding:8px 0}
+  .lrow .t{font-size:clamp(19px,6vw,26px)}
+  .lrow .k{font-size:18px}
+  dialog .x{padding:9px 12px}
+  footer{gap:14px}
+  body{font-size:13px}
+}
+
+@media(max-width:640px){
+  .about{grid-template-columns:36% minmax(0,1fr);gap:14px;align-items:start;margin-bottom:56px}
+  .about .photo{max-width:none;width:100%}
+  .about h2{font-size:clamp(26px,8.5vw,36px);margin-bottom:10px}
+  .about .txt{font-size:11px;line-height:1.45}
+  .about .txt p{margin-bottom:8px}
+  .about .list{margin-top:14px}
+  .about .list button{font-size:14px;padding:10px 0}
+}
+
+@media(max-width:640px){
+  .about{align-items:stretch}
+  .about .photo{aspect-ratio:auto;height:100%;min-height:200px}
+  .about .photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+  .about .list{margin-top:10px}
+  .about .list button{font-size:12px;padding:7px 0}
+}
+
+.list button{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.list button svg{width:.8em;height:.8em;flex:none;transition:transform .2s}
+.list button:hover svg,.list button:focus-visible svg{transform:translate(4px,4px)}
+
+</style>
+</head>
+<body>
+<div class="page">
+  <nav class="nav"><div class="l"><a href="who.html">Кто я</a><a href="#skills">Навыки</a><a href="#gallery">Кейсы</a><a href="#exp">Опыт</a></div><a class="r" href="#contacts">Контакты</a></nav>
+  <h1 class="title" id="title"><span>Portfolio</span></h1>
+
+  <section class="about" id="about">
+    <div class="photo"><img src="img/hero.jpg" alt="Александр Мелихов"></div>
+    <div>
+      <h2><a class="h2link" href="who.html" aria-label="Кто я: перейти на страницу обо мне">Кто я <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 4l16 16M20 8v12H8"/></svg></a></h2>
+      <div class="txt">
+        <p>Привет!<br>Меня зовут Александр, я маркетолог в сфере PR, Event и Influence.</p>
+        <p><b>Опыт:</b> 5 лет 8 месяцев<br><b>Город:</b> Санкт-Петербург<br><b>Подход:</b> креатив ради задачи, результат в цифрах</p>
+      </div>
+      <div class="list" id="dirs"></div>
+    </div>
+  </section>
+
+  <section class="skills" id="skills">
+    <h2>Навыки <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 4l16 16M20 8v12H8"/></svg></h2>
+    <div class="cols">
+      <div><h4>Работаю в:</h4><div class="chips"><span>Bitrix24</span><span>amoCRM</span><span>VK Ads</span><span>VK AdBlogger</span><span>LiveDune</span><span>Яндекс Метрика</span><span>Wordstat</span><span>Senler</span><span>Excel</span><span>Google Sheets</span></div></div>
+      <div><h4>ИИ и автоматизация:</h4><div class="chips"><span>Claude Code</span><span>Вайбкодинг</span><span>Лендинги</span><span>TG-чат-боты</span><span>UTM-разметка</span></div></div>
+      <div><h4>Платный трафик:</h4><div class="chips"><span>Таргетированная реклама</span><span>VK Ads</span><span>Тест гипотез</span><span>A/B кабинеты</span></div></div>
+      <div><h4>Контент:</h4><div class="chips"><span>Продакшн под ключ</span><span>ТЗ и сценарии</span><span>Подрядчики</span><span>Приёмка качества</span></div></div>
+      <div><h4>Репутация:</h4><div class="chips"><span>Работа с отзывами на картах</span><span>Система лояльности</span><span>ORM</span></div></div>
+      <div><h4>Считаю:</h4><div class="chips"><span>CPL</span><span>CPO</span><span>ROMI</span><span>Конверсия воронки</span><span>Окупаемость</span><span>Юнит-экономика</span></div></div>
+    </div>
+  </section>
+
+  <section class="gal" id="gallery">
+    <h2>Кейсы <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 4l16 16M20 8v12H8"/></svg></h2>
+    <div class="filters" id="filters"></div>
+    <p class="dirdesc" id="dirdesc" hidden></p>
+    <div class="grid" id="grid"></div>
+  </section>
+
+  <section class="exp" id="exp">
+    <h2>Опыт <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 4l16 16M20 8v12H8"/></svg></h2>
+    <div class="cols">
+      <div><h4>Сейчас</h4><p>PR-менеджер. Блогеры, мероприятия и выставки, кросс-партнёрства, продюсирование контента. Вся цепочка от поиска исполнителя до аналитики юнит-экономики.</p></div>
+      <div><h4>Раньше</h4><p>Event-менеджер, ассистент SMM-менеджера, отдел качества.</p></div>
+      <div><h4>В планах</h4><p>Развиваю экспертизу в продуктовом маркетинге: воронки, аналитика, автоматизация и Telegram-боты.</p></div>
+      <div><h4>Работал в компаниях</h4><p>Сеть частных клиник «Атрибьют» — PR<br>Торговый холдинг «Все Соки», Max Massage — PR<br>Фотостудия Focus — Event</p></div>
+    </div>
+  </section>
+
+  <footer id="contacts">
+    <div><h5>Социальные сети</h5><a href="https://www.instagram.com/melihov_alexandr/" target="_blank" rel="noopener">Instagram: melihov_alexandr</a></div>
+    <div><h5>Контакты для связи</h5><a href="https://t.me/mas_motion" target="_blank" rel="noopener">Telegram: @mas_motion</a><a href="mailto:melihov.alex.digital@gmail.com">Email: melihov.alex.digital@gmail.com</a></div>
+    <div><h5>©</h5>Portfolio made by Melihov Alexander, 2026<br>Цифры по кейсам из внутренней аналитики, подтверждения по запросу.</div>
+  </footer>
+</div>
+
+<dialog id="dlg" aria-labelledby="dT"><div class="in" id="dBody"></div></dialog>
+
+<script>
+const T=[
+ {d:'PR',tag:'Партнёрство, контент',t:'Интервью со спортивным массажистом',img:'interview',
+  p:'Роль: продюсер, сценарист, редактор монтажа и интервьюер. Задача: раскрыть УТП массажёра для профессионалов, любителей и новичков в спорте.',
+  f:[['215 000 ₽','валовая прибыль с заказов'],['47 000 ₽','затраты на проект']],
+  r:'Интервью помогло заключить сотрудничество со спортивным комплексом на размещение товара. Валовая прибыль в 4,6 раза превысила затраты.',href:''},
+ {d:'PR',tag:'Коллаборация, B2C',t:'Атрибьют x Буана Кафе',img:'buanacafe',contain:1,
+  p:'Продвижение стоматологии через коллабу с кафе.\n\nМеханика: десерт в форме зуба + фирменная зубная щётка и открытка от стоматолога с QR-меткой в подарок.\n\nИдея: стоматолог не против сладкого.',
+  f:[['200 десертов','за 30 дней из 300'],['118 переходов','по QR с UTM'],['467 ₽','стоимость касания']],
+  r:'67% тиража реализовано за первый месяц. PR-история: нестандартный канал привлечения аудитории кафе в клинику.',href:''},
+ {d:'PR',tag:'Коллаборация',t:'Атрибьют x Лаванда Эклер',ph:'Атрибьют × Лаванда',
+  p:'Коллаборация «Атрибьют» и «Лаванда Эклер».',
+  f:[['Кросс-партнёрство','B2C']],href:''},
+ {d:'Event',tag:'Выставка, бьюти-индустрия',t:'Massage Service Expo 2025',img:'mse',wide:1,
+  p:'Был представителем компании Max Massage. Роль: организация участия на стороне экспонента, сбор контактов на стенде, расчёт окупаемости.',
+  f:[['247 446 ₽','расходы'],['1 035 240 ₽','выручка'],['2 222 ₽','CPL'],['9 517 ₽','CPO']],
+  r:'ROMI 318%. Касание с 15% аудитории стенда при 3 500 посетителях.',href:''},
+ {d:'Event',tag:'Спортивное мероприятие',t:'Iron Star',img:'ironstar2',wide:1,
+  p:'Был представителем компании Max Massage. Крупнейшее мероприятие по триатлону в РФ. Роль: организация участия на стороне экспонента, сбор контактов на стенде, расчёт окупаемости.',
+  f:[['435 593 ₽','расходы'],['1 045 000 ₽','выручка'],['2 779 ₽','CPL'],['17 367 ₽','CPO — высокий чек товара']],
+  r:'ROMI 140%. Касание с 8% аудитории при 6 000 посетителях.',href:''},
+ {d:'Event',tag:'Спортивное мероприятие',t:'Медный Всадник',img:'mednyvsadnik',wide:1,
+  p:'Был представителем компании Max Massage. Крупнейшее мероприятие по триатлону в Санкт-Петербурге. Роль: организация участия на стороне экспонента, сбор контактов на стенде, расчёт окупаемости.',
+  f:[['151 198 ₽','расходы'],['1 348 458 ₽','выручка'],['2 016 ₽','CPL'],['8 400 ₽','CPO']],
+  r:'ROMI 791%. Касание с 8% аудитории при 12 000 посетителях.',href:''},
+ {d:'Event',tag:'Конференция, B2B + B2C',t:'Mama Doc',img:'mamadoc',tall:1,
+  p:'Конференция для врачей и родителей.\n\nУчастие в роли спонсора: нетворкинг с врачами для маршрутизации пациентов, две лекции от врачей клиники.\n\nРабота со стендом с B2C-аудиторией — сбор контактов и запись.',
+  f:[['50 000 ₽','стоимость участия'],['40 контактов','охват стенда за 2 дня'],['1 250 ₽','CPL']],
+  r:'2 лекции по 30 минут. Контакты переданы в отдел продаж.',href:''},
+ {d:'Influence',tag:'Блогер, 758 000 подписчиков, «Все соки»',t:'Кокосанка',img:'kokosanka',tall:1,
+  p:'Интеграция в ролике блогера для продвижения блендера Arzia BS4: от выбора исполнителя до анализа результата.',
+  f:[['1 000 000','просмотров'],['0,64%','ER'],['31 914 ₽','бюджет'],['ROMI 135%','3 выкупа × 25 000 ₽']],
+  r:'Холдинг «Все соки», 2024–2026. Бюджет выделяла компания, в среднем 80 000 ₽ на блогера. Моя роль: работа с блогерами под ключ — поиск, предварительная оценка эффективности, договор и маркировка рекламы, оценка результата после публикации.',href:''},
+ {d:'Influence',tag:'Блогер, 253 000 подписчиков, «Все соки»',t:'Александра Житлухина',img:'zhitlukhina',tall:1,
+  p:'Интеграция в ролике блогера для продвижения соковыжималки Hurom H400: от выбора исполнителя до анализа результата.',
+  f:[['368 154','просмотров'],['0,69%','ER'],['41 000 ₽','бюджет'],['ROMI 22%','2 выкупа × 25 000 ₽']],
+  r:'Холдинг «Все соки», 2024–2026. Бюджет выделяла компания, в среднем 80 000 ₽ на блогера. Моя роль: работа с блогерами под ключ — поиск, предварительная оценка эффективности, договор и маркировка рекламы, оценка результата после публикации.',href:''},
+ {d:'Influence',tag:'Блогер, 206 000 подписчиков, «Все соки»',t:'Иван Выкуси',img:'vykusi',tall:1,
+  p:'Интеграция в ролике блогера для продвижения блендера Arzia BS4: от выбора исполнителя до анализа результата.',
+  f:[['638 600','просмотров'],['0,65%','ER'],['34 800 ₽','бюджет'],['ROMI 116%','3 выкупа × 25 000 ₽']],
+  r:'Холдинг «Все соки», 2024–2026. Бюджет выделяла компания, в среднем 80 000 ₽ на блогера. Моя роль: работа с блогерами под ключ — поиск, предварительная оценка эффективности, договор и маркировка рекламы, оценка результата после публикации.',href:''},
+ {d:'Projects',tag:'Личный проект, VK Ads',t:'Фудблог',img:'pumpkin',
+  p:'Кулинарный блог в Instagram — снимаю, монтирую, продвигаю сам.\n\nЗапустил таргетированную рекламу в VK Ads: тестировал два кабинета с разными бюджетами и форматами.',
+  f:[['50 000','просмотров лучшего ролика'],['57 900','показов в VK Ads'],['12 ₽','CPC'],['4 000 ₽','бюджет на рекламу']],href:'https://www.instagram.com/melihov_alexandr/'},
+ {d:'Projects',tag:'Личный проект',t:'Тафтинговые ковры MR_Covrolini',img:'rug',
+  p:'Попытка монетизировать хобби: закупка оборудования за 80 000 ₽, производство, съёмка, ведение Instagram.\n\nРезультат: 0 продаж за 4 месяца. Вывод: себестоимость и цикл принятия решения не позволяют окупить канал без трафика.',
+  f:[['80 000 ₽','вложено'],['7 ковров','произведено'],['8 240','просмотров в Instagram'],['0','продаж']],href:''},
+ {d:'Projects',tag:'Вайбкодинг, личный продукт',t:'Портфолио-сайт маркетолога',ph:'Portfolio',
+  p:'Разработал портфолио с нуля с помощью ИИ. Сайт с фильтрацией кейсов, модальными окнами, мобильной версией.',
+  f:[['Claude Code','инструмент разработки'],['2 страницы','адаптивный HTML/CSS/JS'],['2 000 ₽','бюджет на разработку']],
+  r:'Доказательство: маркетолог может запустить продукт самостоятельно — от идеи до публикации.',href:''},
+
+];
+const K={'Атрибьют x Буана Кафе':['200 десертов','за 30 дней'],'Атрибьют x Лаванда Эклер':['Коллаборация','кросс-партнёрство'],'Mama Doc':['40 контактов','за 2 дня стенда'],'Интервью со спортивным массажистом':['215 000 ₽','валовая прибыль'],'Massage Service Expo 2025':['ROMI 318%','окупаемость'],'Iron Star':['ROMI 140%','окупаемость'],'Медный Всадник':['ROMI 791%','окупаемость'],'Кокосанка':['ROMI 135%','окупаемость'],'Александра Житлухина':['ROMI 22%','окупаемость'],'Иван Выкуси':['ROMI 116%','окупаемость']};
+const DESC={
+ 'PR':'Поиск и организация маркетинговых активностей с целью повышения узнаваемости бренда и обмена аудиторией с другими компаниями.',
+ 'Event':'Организация участия в мероприятиях на стороне экспонента с целью продвижения бренда, взаимодействия с потребителем, сбора лидов и продажи продукта.',
+ 'Influence':'Продвижение бренда через инфлюенсеров. Опыт 3 года: 12–15 микроблогеров ежемесячно, форматы — рилс + сторис с дублем в другие соцсети. Категории: micro, macro, middle.',
+ 'Projects':'Собственные проекты: продукты и эксперименты, которые я запускал и считал сам.'
+};
+const DIRS=['Все','PR','Event','Influence','Projects'];
+const $=s=>document.querySelector(s);
+let cur='Все';
+function draw(){
+  $('#filters').innerHTML=DIRS.map(k=>`<button data-k="${k}" class="${k===cur?'on':''}">${k}</button>`).join('');
+  const dd=$('#dirdesc');dd.textContent=DESC[cur]||'';dd.hidden=!DESC[cur];
+  const items=T.map((c,i)=>({c,i})).filter(x=>cur==='Все'||x.c.d===cur);
+  $('#grid').className='rows';
+  $('#grid').innerHTML=items.map(({c,i},n)=>{const k=K[c.t]||['',''];return `<button class="lrow" data-i="${i}"><span class="n">${String(n+1).padStart(2,'0')}</span><span class="t">${c.t}<small>${c.tag}</small></span><span class="d">${c.d}</span><span class="k">${k[0]}<span>${k[1]}</span></span></button>`}).join('');
+  document.querySelectorAll('#filters button').forEach(b=>b.onclick=()=>{cur=b.dataset.k;draw()});
+  document.querySelectorAll('.lrow').forEach(b=>{
+    const c=T[+b.dataset.i];
+    b.onclick=()=>open(+b.dataset.i);
+  });
+}
+function open(i){
+  const c=T[i];
+  const media=c.img?`<div class="media"><div class="photo${c.tall?' tall':''}${c.contain?' contain':''}"><img src="img/${c.img}.jpg" alt="${c.t}"></div></div>`:'';
+  $('#dBody').innerHTML=`<div class="dlgrid${c.img?'':' solo'}${c.contain?' contain':''}${c.wide?' wide':''}">${media}<div class="info">
+   <div class="top"><div><div class="tag">${c.d} / ${c.tag}</div><h3 id="dT">${c.t}</h3></div><button class="x" id="x">Закрыть</button></div>
+   <p>${c.p.replace(/\n\n/g,'</p><p>')}</p><ul class="facts">${c.f.map(([a,b])=>`<li><b>${a}</b>${b}</li>`).join('')}</ul>
+   ${c.r?`<p class="res">${c.r}</p>`:''}${c.href?`<p><a class="src" href="${c.href}" target="_blank" rel="noopener">Источник</a></p>`:''}</div></div>`;
+  $('#x').onclick=()=>$('#dlg').close();
+  $('#dlg').showModal();
+}
+$('#dlg').addEventListener('click',e=>{if(e.target===$('#dlg'))$('#dlg').close()});
+$('#dirs').innerHTML=DIRS.slice(1).map(k=>`<button data-k="${k}">${k}<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 4l16 16M20 8v12H8"/></svg></button>`).join('');
+document.querySelectorAll('#dirs button').forEach(b=>b.onclick=()=>{cur=b.dataset.k;draw();document.getElementById('gallery').scrollIntoView({behavior:'smooth'})});
+draw();
+function fitTitle(){
+  const t=document.getElementById('title'),sp=t.firstElementChild;
+  const mob=innerWidth<=640;
+  const full='Portfolio';
+  sp.textContent=full;
+  const lines=[full.toUpperCase()];
+  const cs=getComputedStyle(t);
+  const c=document.createElement('canvas').getContext('2d');
+  c.font=`${cs.fontWeight} 100px ${cs.fontFamily}`;
+  let ink=0,left=0;
+  lines.forEach((l,i)=>{const m=c.measureText(l);const w=m.actualBoundingBoxRight+m.actualBoundingBoxLeft;if(w>ink)ink=w;if(i===0)left=-m.actualBoundingBoxLeft});
+  const k=t.clientWidth/ink;
+  t.style.fontSize=(100*k)+'px';
+  sp.style.marginLeft=(-left*k)+'px';
+}
+fitTitle();addEventListener('resize',fitTitle);
+if(document.fonts&&document.fonts.ready)document.fonts.ready.then(fitTitle);
+addEventListener('load',fitTitle);
+
+document.querySelectorAll('.nav a[href]').forEach(a=>a.addEventListener('click',e=>{
+  const h=a.getAttribute('href');
+  if(h.startsWith('#')){
+    const t=document.getElementById(h.slice(1));
+    if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'});try{history.replaceState(null,'',h)}catch(_){}}
+  }
+}));
+</script>
+</body>
+</html>
