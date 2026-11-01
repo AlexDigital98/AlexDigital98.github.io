@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#ffffff">
+<title>Кто я — Портфолио маркетолога MAS</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--g:#0b5d1e;--ink:#111;--line:#bdbdbd;--soft:#efefef;
+ --sans:'Golos Text','Helvetica Neue',Helvetica,Arial,sans-serif;--mono:'IBM Plex Mono',ui-monospace,Menlo,monospace}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#fff;color:var(--ink);font-family:var(--mono);font-size:12px;line-height:1.5;-webkit-text-size-adjust:100%}
+a{color:inherit}
+.page{max-width:1280px;margin:0 auto;padding:12px clamp(14px,3.5vw,46px) 0}
+.nav{display:flex;justify-content:space-between;gap:12px;font-size:11px}
+.nav .l{display:flex;gap:clamp(12px,2.2vw,28px);flex-wrap:wrap}
+.nav a{text-decoration:none}.nav a:hover{color:var(--g)}
+.title{font-family:var(--sans);font-weight:400;color:var(--g);text-transform:uppercase;line-height:.86;letter-spacing:0;margin:6px 0 clamp(18px,3vw,34px);
+  font-size:min(16vw,222px);white-space:nowrap;display:block;width:100%}
+.title span{display:inline-block}
+h2{font-family:var(--sans);font-weight:400;text-transform:uppercase;font-size:clamp(34px,5.2vw,64px);line-height:1;letter-spacing:-.01em;margin:0 0 22px;display:flex;align-items:center;gap:.25em}
+h2 svg{width:.62em;height:.62em;flex:none}
+.about{display:grid;grid-template-columns:minmax(0,26%) minmax(0,1fr);gap:clamp(18px,3vw,44px);margin-bottom:clamp(60px,9vw,110px)}
+.photo{position:relative;overflow:hidden;background:var(--soft)}
+.photo img{display:block;width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.05);transition:filter .4s}
+.photo:hover img{filter:none}
+.about .photo{aspect-ratio:3/4}
+.about .txt{max-width:560px;font-size:12px}
+.about .txt p{margin:0 0 12px}
+.list{margin-top:26px;border-top:1px solid var(--line)}
+.list button{display:block;width:100%;text-align:left;font:400 clamp(15px,1.6vw,19px)/1 var(--sans);text-transform:uppercase;background:none;border:0;border-bottom:1px solid var(--line);padding:11px 0;cursor:pointer;color:var(--ink)}
+.list button:hover{color:var(--g)}
+.skills{margin-bottom:clamp(60px,9vw,110px)}
+.skills .cols{max-width:none;grid-template-columns:1.3fr 1fr 1fr;gap:26px clamp(18px,3vw,44px)}
+.cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:26px 40px;max-width:760px}
+.cols h4{margin:0 0 12px;font:400 12px var(--mono);text-transform:uppercase}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chips span{border:1px solid var(--ink);border-radius:5px;padding:3px 8px;font-size:11px}
+.plain{display:grid;grid-template-columns:1fr 1fr;gap:2px 20px;font-size:11px}
+.gal{margin-bottom:clamp(60px,9vw,110px)}
+.filters{display:flex;gap:6px 20px;flex-wrap:wrap;margin:-8px 0 20px;font-size:11px;text-transform:uppercase}
+.filters button{font:inherit;background:none;border:0;border-bottom:1px solid transparent;cursor:pointer;padding:2px 0;color:var(--ink);opacity:.5}
+.filters button.on{opacity:1;border-color:var(--ink)}
+.filters button:hover{opacity:1}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.item{text-align:left;background:none;border:0;padding:0;cursor:pointer;font:inherit;color:inherit;display:flex;flex-direction:column;gap:8px}
+.item .photo,.item .box{aspect-ratio:4/5;width:100%}
+.item .box{background:var(--soft);display:flex;align-items:flex-end;padding:12px;font:400 clamp(18px,2vw,26px)/1 var(--sans);text-transform:uppercase;transition:background .3s,color .3s}
+.item:hover .box{background:var(--g);color:#fff}
+.item small{font-size:11px;line-height:1.35}
+.item small b{font-weight:500;display:block;text-transform:uppercase}
+.item:focus-visible{outline:2px solid var(--g);outline-offset:3px}
+.exp{margin-bottom:clamp(60px,9vw,110px)}
+.exp .cols{margin-left:0;max-width:none;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.exp .cols h4{font-family:var(--sans);font-size:clamp(15px,1.6vw,19px)}
+.exp p{margin:0 0 10px;max-width:420px}
+footer{border-top:1px solid var(--line);padding:18px 0 calc(26px + env(safe-area-inset-bottom,0px));display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px;font-size:11px}
+footer h5{margin:0 0 6px;font:500 11px var(--mono);text-transform:uppercase}
+footer a{display:block;text-decoration:none}footer a:hover{color:var(--g)}
+dialog{border:0;padding:0;max-width:760px;width:calc(100% - 24px);max-height:90svh;background:#fff;color:var(--ink);font-family:var(--mono)}
+dialog::backdrop{background:rgba(0,0,0,.6)}
+dialog .in{padding:22px;display:grid;gap:14px}
+dialog .top{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}
+dialog h3{font:400 clamp(26px,4vw,40px)/1 var(--sans);text-transform:uppercase;margin:0}
+dialog .x{font:inherit;text-transform:uppercase;background:none;border:1px solid var(--ink);padding:5px 10px;cursor:pointer;flex:none}
+dialog .x:hover{background:var(--ink);color:#fff}
+dialog .photo{aspect-ratio:16/9;max-height:340px}
+dialog .photo.tall img{object-position:center 30%}
+dialog .tag{font-size:11px;color:var(--g);text-transform:uppercase}
+dialog p{margin:0;font-size:12px}
+.facts{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));border-top:1px solid var(--line)}
+.facts li{padding:10px 10px 10px 0;border-bottom:1px solid var(--line);font-size:11px}
+.facts b{display:block;font:400 clamp(18px,2.4vw,24px)/1.1 var(--sans);margin-bottom:2px}
+.res{border-left:3px solid var(--g);padding-left:10px}
+.src{color:var(--g)}
+@media(max-width:900px){.grid{grid-template-columns:repeat(2,1fr)}.skills .cols{grid-template-columns:1fr}}
+@media(max-width:640px){
+  .about{grid-template-columns:1fr}.about .photo{max-width:260px}
+  .nav .r{display:none}
+  .grid{gap:12px 8px}
+}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+
+.nav .cur{color:var(--g);border-bottom:1px solid var(--g)}
+.big{font-family:var(--sans);font-weight:400;color:var(--g);text-transform:uppercase;line-height:.86;margin:6px 0 clamp(18px,3vw,34px);font-size:min(18vw,222px);letter-spacing:-.02em}
+.intro{display:grid;grid-template-columns:minmax(0,26%) minmax(0,1fr);gap:clamp(18px,3vw,44px);margin-bottom:clamp(60px,9vw,110px)}
+.intro .photo{aspect-ratio:3/4}
+.intro .lead{font:400 clamp(20px,2.6vw,34px)/1.2 var(--sans);max-width:720px;margin:0 0 20px}
+.intro .txt{max-width:560px}
+.block{display:grid;grid-template-columns:minmax(0,26%) minmax(0,1fr);gap:clamp(18px,3vw,44px);margin-bottom:clamp(50px,7vw,90px);padding-top:18px;border-top:1px solid var(--line)}
+.block h3{font:400 clamp(22px,2.4vw,30px)/1 var(--sans);text-transform:uppercase;margin:0}
+.block p{margin:0 0 12px;max-width:560px}
+.row{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+.row .photo{flex:1 1 140px;max-width:260px;aspect-ratio:3/4}
+.row .photo.wide{flex:1 1 100%;max-width:none;aspect-ratio:auto}
+.row .photo.wide img{height:auto}
+.row .photo.land{flex:1 1 220px;max-width:340px;aspect-ratio:4/3}
+@media(max-width:700px){.intro,.block{grid-template-columns:1fr}.intro .photo{max-width:260px}.nav .r{display:block}}
+
+.nav{position:sticky;top:0;z-index:50;background:#fff;padding:12px 0 10px;margin:0 0 -4px}
+.nav a{cursor:pointer;padding:4px 0;border-bottom:1px solid transparent}
+.nav a:hover{border-color:var(--g)}
+.title,.title *{pointer-events:none}
+section[id],footer[id]{scroll-margin-top:48px}
+.banner{width:100%;margin:0 0 clamp(28px,4vw,48px);overflow:hidden;background:var(--soft)}
+.banner img{display:block;width:100%;aspect-ratio:3.6/1;object-fit:cover;object-position:center 38%}
+@media(max-width:700px){.banner img{aspect-ratio:16/9}}
+.pagetitle{color:var(--g);margin:18px 0 22px}
+
+@media(max-width:640px){
+  .page{padding-top:0}
+  .nav{gap:12px;padding:10px 0 8px;font-size:11px;align-items:center}
+  .nav .l{flex-wrap:nowrap;overflow-x:auto;white-space:nowrap;gap:16px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  .nav .l::-webkit-scrollbar{display:none}
+  .nav .r{display:block;flex:none;white-space:nowrap}
+  .nav a{padding:10px 0}
+  h2{font-size:clamp(30px,10vw,44px);margin-bottom:16px}
+  .list button{padding:14px 0}
+  .skills .cols{grid-template-columns:1fr}
+  .chips span{padding:6px 10px}
+  .filters{gap:6px 16px;margin-bottom:14px}
+  .filters button{padding:8px 0}
+  .lrow .t{font-size:clamp(19px,6vw,26px)}
+  .lrow .k{font-size:18px}
+  dialog .x{padding:9px 12px}
+  footer{gap:14px}
+  body{font-size:13px}
+}
+
+@media(max-width:700px){.banner{background:none}.banner img{height:auto;aspect-ratio:auto;object-fit:contain}}
+ul.dash{list-style:none;margin:0 0 12px;padding:0}
+ul.dash li{padding-left:1.4em;position:relative;margin-bottom:4px}
+ul.dash li::before{content:'—';position:absolute;left:0;color:var(--g)}
+
+.sslider{display:flex;align-items:center;gap:10px;margin-top:16px}
+.strack{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;-webkit-overflow-scrolling:touch;flex:1}
+.strack::-webkit-scrollbar{display:none}
+.sphoto{flex:0 0 208px;scroll-snap-align:start;aspect-ratio:3/4;overflow:hidden;background:var(--soft)}
+.sphoto img{width:100%;height:100%;object-fit:cover;filter:grayscale(1) contrast(1.05);display:block;transition:filter .4s}
+.sphoto:hover img{filter:none}
+.sarr{background:none;border:none;cursor:pointer;color:var(--g);padding:4px;flex:none;line-height:0;opacity:.7;transition:opacity .2s}
+.sarr:hover{opacity:1}
+.sarr svg{width:28px;height:28px;display:block}
+@media(max-width:640px){.sphoto{flex:0 0 62vw}}
+</style>
+</head>
+<body>
+<div class="page">
+  <nav class="nav"><div class="l"><a class="cur" href="who.html">Кто я</a><a href="index.html#skills">Навыки</a><a href="index.html#gallery">Кейсы</a><a href="index.html#exp">Опыт</a></div><a class="r" href="index.html#contacts">Контакты</a></nav>
+  <h2 class="pagetitle">Кто я <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 4l16 16M20 8v12H8"/></svg></h2>
+
+  <div class="banner"><img src="img/who-banner.jpg" alt="Александр Мелихов"></div>
+
+  <section class="intro">
+    <div></div>
+    <div>
+      <p class="lead">Маркетолог, который умеет проходить дистанцию и финишировать.</p>
+      <div class="txt">
+        <p>Меня зовут Александр, мне важно, чтобы у идеи можно было измерить результат, это помогает мне избежать тревоги.</p>
+        <p>Работу с людьми и цифрами я совмещаю с творчеством и активностями:</p>
+        <ul class="dash"><li>Снимаю, монтирую готовку</li><li>Тренируюсь и выступаю на соревнованиях по триатлону</li><li>Большая часть жизни не маркетинг, а музыка</li><li>Прошёл курс <a href="https://zamesinschool.ru/products/boost#program" target="_blank" rel="noopener" style="color:var(--g)">Boost</a> у Замесина — научился вайбкодить и запускать продукты с помощью ИИ</li></ul>
+        <p>Ниже то, что делает меня тем, кто я есть, помимо рабочих кейсов.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <h3>Спорт</h3>
+    <div>
+      <p>7 лет занятий единоборствами от любителя до соревновательного уровня. Пробовал бокс, кикбоксинг, тайский бокс. Большой интерес к грэпплингу.</p>
+      <p>В этом году впервые участвовал в триатлоне, хочу дорасти до железной половинки — 113 км.</p>
+      <div class="sslider">
+        <button class="sarr sl" onclick="ss(-1)" aria-label="Назад"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 12H4M10 6l-6 6 6 6"/></svg></button>
+        <div class="strack" id="strack">
+          <div class="sphoto"><img src="img/sport1.jpg" alt="Триатлон"></div>
+          <div class="sphoto"><img src="img/sport2.jpg" alt="Грэпплинг"></div>
+          <div class="sphoto"><img src="img/sport3.jpg" alt="Соревнования"></div>
+          <div class="sphoto"><img src="img/sport12.jpg" alt="БЖЖ, тренировка"></div>
+          <div class="sphoto"><img src="img/sport13.jpg" alt="БЖЖ, соревнования"></div>
+          <div class="sphoto"><img src="img/sport14.jpg" alt="Karelia Triathlon, финиш"></div>
+        </div>
+        <button class="sarr sr" onclick="ss(1)" aria-label="Вперёд"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12h16M14 6l6 6-6 6"/></svg></button>
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <h3>Музыка</h3>
+    <div>
+      <p>Музыкальное образование по классу валторны. 11 лет учёбы дали возможность побывать за кулисами столичных театров и лично познакомиться с составом группы «Ария».</p>
+      <div style="display:flex;gap:10px;margin-top:16px">
+        <div class="photo" style="width:208px;height:208px;flex:0 0 208px"><img src="img/music.jpg" alt="Валторна" style="object-position:center center"></div>
+        <div class="photo" style="width:208px;height:208px;flex:0 0 208px"><img src="img/music2.jpg" alt="Оркестр" style="object-position:center 30%"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block">
+    <h3>Творчество</h3>
+    <div>
+      <p>Люблю готовить и снимаю кулинарные ролики в Instagram: из первых 20 рецептов один набрал 50 000 просмотров. Ещё делал тафтинговые ковры и прошёл с этим хобби полный цикл от закупки оборудования до продаж и юнит-экономики.</p>
+      <div class="row"><div class="photo"><img src="img/pumpkin.jpg" alt="Запечённая тыква"></div><div class="photo"><img src="img/rug.jpg" alt="Тафтинговый ковёр"></div></div>
+    </div>
+  </section>
+
+  <section class="block">
+    <h3>Моделинг</h3>
+    <div>
+      <p>В определённый период хотел стать моделью, участвовал в творческих съёмках. Самым знаковым стало участие в фотосессии для бренда профессиональной косметики 19 LAB.</p>
+      <div class="row"><div class="photo wide"><img src="img/modeling.jpg" alt="Фотосессия 19 LAB"></div></div>
+    </div>
+  </section>
+
+  <footer id="contacts">
+    <div><h5>Социальные сети</h5><a href="https://www.instagram.com/melihov_alexandr/" target="_blank" rel="noopener">Instagram: melihov_alexandr</a></div>
+    <div><h5>Контакты для связи</h5><a href="https://t.me/mas_motion" target="_blank" rel="noopener">Telegram: @mas_motion</a><a href="mailto:melihov.alex.digital@gmail.com">Email: melihov.alex.digital@gmail.com</a></div>
+    <div><h5>©</h5>Portfolio made by Melihov Alexander, 2026</div>
+  </footer>
+</div>
+
+<script>
+function ss(dir){const t=document.getElementById('strack'),w=t.querySelector('.sphoto').offsetWidth+10;t.scrollBy({left:dir*w,behavior:'smooth'})}
+</script>
+</body>
+</html>
